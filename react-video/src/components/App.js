@@ -19,7 +19,7 @@ class App extends React.Component {
             part: 'snippet',
             maxResults: 5,
             type: 'video',
-          },
+          }
         });
         this.setState({
             videoList: data.items,
