@@ -1,8 +1,26 @@
 import React from 'react';
 
 class VideoDetails extends React.Component {
+
+
     render() {
-        return <div>Video Details</div>;
+        const video = this.props.video;
+
+        console.log(video);
+        if (video) {
+            return (
+                <div>
+                    <div className="ui embed">
+                        <iframe title="video player" src={`https://www.youtube.com/embed/${video.id.videoId}`}></iframe>
+                    </div>
+                    <div className="ui segment">
+                        <h4 className="ui header">{video.snippet.title}</h4>
+                        <p>{video.snippet.description}</p>
+                    </div>
+                </div>
+            )
+        }
+        return <div>loaindg...</div>
     }
 }
 
